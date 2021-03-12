@@ -1,24 +1,45 @@
-
-.column {
+/* dimension columns */
+.contentCard {
   float: left;
-  width: 50%;
-  padding: 0 20px;
+     margin-bottom: 7px;
+    width: 25%;
+  min-width: 25%;
+  max-width: 25%;
+    display: block;
+    padding: 0 0;
 }
 
-.row {margin: 0 -5px;}
 
+/* .row {margin: 0 -5px;} */
+/* 
 .row:after {
   content: "";
   display: table;
   clear: both;
-}
+} */
 
-@media screen and (max-width: 900px) {
-  .column {
-    margin-left: 15%;
-    width: 70%;
+/* domesion resposive columns */
+@media screen and (max-width: 1366px) {
+  .contentCard {
+      margin-bottom: 7px;
+    width: 50%;
+  min-width: 50%;
+  max-width: 50%;
     display: block;
-    margin-bottom: 30px;
+    padding: 0 0;
+  
+
+  }
+}
+@media screen and (max-width: 855px) {
+  .contentCard {
+  margin-bottom: 7px;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+    display: block;
+    padding: 0 0;
+  
 
   }
 }

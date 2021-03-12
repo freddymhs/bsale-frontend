@@ -1,7 +1,7 @@
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 4px 4px;
 }
 .header { grid-area: 1 / 1 / 2 / 4; }
@@ -9,6 +9,12 @@
 .option { grid-area: 3 / 1 / 6 / 2; }
 .content { grid-area: 3 / 2 / 6 / 4; }
 .footer { grid-area: 6 / 1 / 7 / 4; }
+
+
+.subheader{
+
+
+}
 
 
 

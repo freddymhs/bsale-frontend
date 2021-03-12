@@ -5,13 +5,17 @@
 @import "./grid.css";
 /* default */
 *{
-  border:1px  solid black;
+  border:1px  solid grey;
   box-sizing: border-box;
+}
+body{
+ background-color: #FBFBFD;
 }
 /* apariencia */
 h1,h2{
    font-family: 'Baloo 2';
    font-weight: 800;
+    color: #F85B1B;
 }
 header h1{
    margin: auto;
@@ -19,10 +23,12 @@ header h1{
    padding-top: 10px;
    padding-bottom: 40px;
    text-align: center;
+  
 }
-h3,h4{
+h3,h4,ul{
   font-family: 'Baloo 2';
    font-weight: 600;
+   color: #2C9BE5;
 }
 h5,p,a{
   font-family: 'Baloo 2';

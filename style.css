@@ -1,0 +1,53 @@
+/* https://materializecss.com/icons.html */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&display=swap');
+@import "./column.css"; /*in progress*/
+@import "./card.css";
+@import "./grid.css";
+/* default */
+*{
+  border:1px  solid black;
+  box-sizing: border-box;
+}
+/* apariencia */
+h1,h2{
+   font-family: 'Baloo 2';
+   font-weight: 800;
+}
+header h1{
+   margin: auto;
+   width: 40%;
+   padding-top: 10px;
+   padding-bottom: 40px;
+   text-align: center;
+}
+h3,h4{
+  font-family: 'Baloo 2';
+   font-weight: 600;
+}
+h5,p,a{
+  font-family: 'Baloo 2';
+   font-weight: 400;
+}
+
+/* posicion */
+.page-title{
+text-align: center;
+
+}
+.page-subtitle{
+text-align: center;
+margin-right: 40%;
+}
+
+
+.search{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 60%;
+}
+
+
+/* // Regular 400
+// Semi-bold 600
+// Extra-bold 800 */

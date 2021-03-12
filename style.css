@@ -1,69 +1,16 @@
+
 /* https://materializecss.com/icons.html */
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&display=swap');
-@import "./column.css"; /*in progress*/
-@import "./card.css";
+
+
+@import "./base.css"; 
+@import "./topnav.css";
+
+
+
 @import "./grid.css";
+@import "./column.css"; 
 
-/* default */
-*{
-  border:1px  solid grey;
-  box-sizing: border-box;
-}
-body{
- background-color: #FBFBFD;
-}
+@import "./card.css";
 
 
-h1,h2{
-   font-family: 'Baloo 2';
-   font-weight: 800;
-    color: #F85B1B;
-}
-header h1{
-   margin: auto;
-   width: 40%;
-   padding-top: 10px;
-   padding-bottom: 40px;
-   text-align: center;
-  
-}
-h3,h4,ul{
-  font-family: 'Baloo 2';
-   font-weight: 600;
-   color: #2C9BE5;
-}
-h5,p,a{
-  font-family: 'Baloo 2';
-   font-weight: 400;
-}
-
-
-.page-title{
-text-align: center;
-
-}
-.page-subtitle{
-text-align: center;
-margin-right: 40%;
-}
-.search{
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  width: 60%;
-  border-radius: 5px;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  margin-bottom: 14px;
-}
-.search:hover, .search:focus{
-  outline: none;    
-  box-shadow: 0 0 8px 2px #2C9BE5; 
-  transition: 0.3s;
-}
-
-
-
-/* // Regular 400
-// Semi-bold 600
-// Extra-bold 800 */

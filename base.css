@@ -1,0 +1,8 @@
+/* default */
+*{
+  /* border:1px  solid grey; */
+  box-sizing: border-box;
+}
+body{
+ background-color: #FBFBFD;
+}

@@ -1,18 +1,39 @@
 //configure
 const url = "https://bsale-backend.herokuapp.com/api/product";
 
-
-
-
 //query to api
 fetch (url).then(res=>res.json())
 .then(data=>{
-  console.log(data)
+  // console.log(data)
+  drawCard(data.list[0])
+ 
 })
 .catch(err=>{
   console.log()
 })
 
+
+const drawCard =e =>{
+  const id = `${e.id}`
+  const name = `${e.name}`
+  const imagen = `${e.url_image}`
+  const price = `${e.price}`
+  const discount = `${e.discount}`
+  const category = `${e.category}`
+
+  const element = `
+              <div>
+              <p>${id}</p>
+              <img src="${imagen}">
+              <p>${name}</p>
+              <p>${price}</p>
+              <p>${discount}</p>
+              <p>${category}</p>
+              </div>
+  `
+
+  test.insertAdjacentHTML('beforeEnd',element)
+}
 
 
 

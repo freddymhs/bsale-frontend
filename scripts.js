@@ -20,11 +20,11 @@ inputSearch.addEventListener("change", ()=>{
 async function fetchApi(matchQuery) {
   let res;
   if (matchQuery) {
-    res =  await getProducts("http://localhost:3000/api/product/"+matchQuery); // search a product
+    res =  await getProducts("https://bsale-backend.herokuapp.com/api/product/"+matchQuery); // search a product
 console.log("busqueda personalizada")
   console.log(res)
   }   else {
-  res = await getProducts('http://localhost:3000/api/product');  // all products
+  res = await getProducts('https://bsale-backend.herokuapp.com/api/product');  // all products
   console.log("todos los resultados")
   console.log(res)
   }

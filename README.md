@@ -1,21 +1,15 @@
-# bsale-frontend
- html css javascript
+# https://bsale-frontend.netlify.app/
+## frontend
 
+- creado en html css javascript 
 
-file:///Users/fmarcos/Desktop/14Marzo/bsale-frontend/index.html
+- requisitos  
+[x] js vanilla  sin frameworks  
+[x] despliega productos agrupados por categoria  
+[x] buscador de productos por nombre   
 
-
-
-- atributos
-
-```
-   <div>
-              <p>${id}</p>
-              <img src="${imagen}">
-              <p>${name}</p>
-              <p>${price}</p>
-              <p>${discount}</p>
-              <p>${category}</p>
-              </div>
-
-```
+- opcionales
+buscar por atributos  
+ordenar productos por alguna caracteristica  
+paginacion  
+etc...  

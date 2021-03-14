@@ -1,37 +1,40 @@
 
-// inputs
+// inputs output html
 const inputSearch = document.querySelector('#input-search');
 const output = document.querySelector('#maincontent');
 
-// event content loaded on page
+
+/* event content loaded on page*/
 document.addEventListener('DOMContentLoaded', fetchApi());
 
 
-//search for input
+/* write new content ... search */
 inputSearch.addEventListener("change", ()=>{
   iconloader();
-  
-  let newSearch = inputSearch.value;   fetchApi(newSearch);
+  let newSearch = inputSearch.value;  
+  fetchApi(newSearch);
 })
 
 
 
-// main function
+
+/* main function */
 async function fetchApi(matchQuery) {
+  const url = "https://bsale-backend.herokuapp.com/api/product/";
+  // const url ="http://localhost:3000/api/product/"
+
   let res;
   if (matchQuery) {
-    res =  await getProducts("https://bsale-backend.herokuapp.com/api/product/"+matchQuery); // search a product
-console.log("busqueda personalizada")
-  console.log(res)
+    res =  await getProducts(url+matchQuery); // search a specific product by name
   }   else {
-  res = await getProducts('https://bsale-backend.herokuapp.com/api/product');  // all products
-  console.log("todos los resultados")
-  console.log(res)
+  res = await getProducts(url);  // all products
   }
 
 
-  //clear input to print result
+
   output.innerHTML="";
+
+  /* new input result html */
   res.map((data)=>{
     const      htmlString  =`
         <div class="card">
@@ -55,42 +58,9 @@ console.log("busqueda personalizada")
   outputString.innerHTML = htmlString;
   output.appendChild(outputString)
   })
-
-
-
-//   res.forEach((data) => {
-//     // new card
-//     let htmlstring
-  
-//     const contentCard = document.createElement('div');
-   
-//     contentCard.className = 'contentCard';
-//      htmlstring = `
-//         <div class="card">
-//           <div>
-//             <p>Descuento de ${data.discount}</p>
-//           </div>
-//           <img src="${data.url_image}" alt="Avatar" style="width:100%">
-//           <div class="container">
-//             <b>${data.name}</b>
-//           </div>
-//           <div class="container">
-//             <div>
-//               <p>${data.price}</p>
-//             </div>
-//           </div>
-//         </div>
-// `;
-
-
-    // // insert content to the card
-    // contentCard.innerHTML = htmlstring;
-    // output.append(contentCard);
-    
-  // });
 }
 
-// function fetch return data json
+/* function fetch return data json */
 async function getProducts(fromUrl) {
   return fetch(fromUrl)
     .then((response) => response.json())
@@ -100,11 +70,8 @@ async function getProducts(fromUrl) {
     .catch((err) => console.log(err));
 }
 
-setInterval(() => {
-  console.log(inputSearch.value);
-}, 3000);
 
-
+/* function  return icon loading  */
 function iconloader(){
   output.innerHTML=` <div class="loader">Loading...</div>`
 }
